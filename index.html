@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="conatiner">
+        <label for="username">Type Username name here:</label>
+        <input type="text" name="username" id="username"><br>
+        <button id="btn-username">Username Detail</button><br>
+<ul id="list">
+    <p><strong>Username:</strong> <span id="displayUsername"></span></p>
+    <p><strong>ID:</strong> <span id="displayName"></span></p>
+    <p><strong>Account created date:</strong> <span id="displayLocation"></span></p>
+    <p><strong>Repositories link:</strong> <span id="displayPublicRepos"></span></p>
+</ul>
+
+
+<button id="buttonrepo">Fetch Repositories</button>
+  <table id="repoTable" style="display:none;">
+    <thead>
+      <tr>
+        <th>Repository Name</th>
+        <th>Description</th>
+        <th>URL</th>
+      </tr>
+    </thead>
+    <tbody id="repoData"></tbody>
+  </table>
+
+
+
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
