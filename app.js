@@ -11,12 +11,11 @@ inputBtn.addEventListener("click", async () => {
     if (response.ok) {
       const result = await response.json();
       document.getElementById("displayUsername").textContent = result.login;
-      document.getElementById("displayName").textContent =
+      document.getElementById("displayID").textContent =
         result.id || "Not available";
-      document.getElementById("displayLocation").textContent =
+      document.getElementById("createddate").textContent =
         result.created_at || "Not available";
-      document.getElementById("displayPublicRepos").textContent =
-        result.repos_url || 0;
+      document.getElementById("repourls").textContent = result.repos_url || 0;
       console.log(result);
       list.style.display = "block";
     } else {
@@ -36,7 +35,6 @@ inputBtn2.addEventListener("click", async () => {
       `https://api.github.com/users/${username}/repos?per_page=15`
     );
     if (response.ok) {
-      //   const result = await response.json();
       const repos = await response.json();
       displayRepos(repos);
       console.log(repos);
@@ -45,10 +43,8 @@ inputBtn2.addEventListener("click", async () => {
         const table = document.getElementById("repoTable");
         const repoData = document.getElementById("repoData");
 
-        // Clear previous data
         repoData.innerHTML = "";
 
-        // Populate table with repositories
         repos.forEach((repo) => {
           const row = document.createElement("tr");
           const nameCell = document.createElement("td");
@@ -58,7 +54,6 @@ inputBtn2.addEventListener("click", async () => {
           nameCell.textContent = repo.name;
           descriptionCell.textContent =
             repo.description || "No description available";
-          //   urlCell.innerHTML = `<a href="${repo.html_url}" target="_blank">View</a>`;
           urlCell.innerHTML = repo.html_url;
           row.appendChild(nameCell);
           row.appendChild(descriptionCell);
@@ -66,7 +61,6 @@ inputBtn2.addEventListener("click", async () => {
           repoData.appendChild(row);
         });
 
-        // Show the table
         table.style.display = "table";
       }
     } else {
