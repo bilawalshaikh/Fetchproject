@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="conatiner">
+      <label for="username">Type Username name here:</label>
+      <input type="text" name="username" id="username" /><br /><br />
+      <button id="btn-username" onclick="usernameDetail()">
+        Username Detail
+      </button>
+
+      <button id="buttonrepo" onclick="fetchDetail()">
+        Fetch Repositories
+      </button>
+
+      <ul id="list">
+        <p><strong>Username:</strong> <span id="displayUsername"></span></p>
+        <p><strong>ID:</strong> <span id="displayID"></span></p>
+        <p>
+          <strong>Account created date:</strong> <span id="createddate"></span>
+        </p>
+        <p><strong>Repositories link:</strong> <span id="repourls"></span></p>
+      </ul>
+
+      <table id="repoTable" style="display: none">
+        <thead>
+          <tr>
+            <th>Repository Name</th>
+            <th>Description</th>
+            <th>URL</th>
+          </tr>
+        </thead>
+        <tbody id="repoData"></tbody>
+      </table>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

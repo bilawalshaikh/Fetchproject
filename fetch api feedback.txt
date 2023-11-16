@@ -1,0 +1,13 @@
+Feedbacks for fetch API project
+
+1. Instead of using input event listeners, see if we can use an event attribute on the button to execute respective function
+
+2. I see a few indentation gaps in HTML tags and CSS file
+
+3. Replace async await with pure promise syntax of .then() to handle fetch API callback function
+
+4. We can skip try catch block, and handle for any exception using promises syntax. You need to check how to do that
+
+5. We can use destructuring to pick required values from response and then use them to output data
+
+6. function declare ya define karna ho tou hamesha usko conditional block ke bahar rakhte hain. You can execute them in the conditional block, but don't create a new function inside such code block

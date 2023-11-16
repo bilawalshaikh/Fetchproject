@@ -1,0 +1,46 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* This ensures the body takes up the full viewport height */
+  margin: 0;
+}
+
+#list {
+  display: none;
+}
+
+#repoTable {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#repoTable th,
+#repoTable td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+#repoTable th {
+  background-color: #f2f2f2;
+}
+
+#buttonrepo,
+#btn-username {
+  padding: 10px 20px;
+  border: none;
+  background-color: #4caf50;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#buttonrepo:hover {
+  background-color: #45a049;
+}
